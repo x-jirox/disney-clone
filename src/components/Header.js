@@ -14,13 +14,13 @@ const Header = (props) => {
   const userPhoto = useSelector(selectUserPhoto); // Corrección aquí
 
   useEffect(() => {
-    auth.onAuthStateChanged(async(user) =>{
-      if(user){
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
         setUser(user);
         history("/home");
       }
     });
-  },[userName]);
+  }, [userName, history]);  // Agregar 'history' a las dependencias
 
   const handleAuth = () => {
     if(!userName){
