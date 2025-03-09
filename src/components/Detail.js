@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { doc, getDoc } from "firebase/firestore";
 import db from "../firebase";
 
+
 const Detail = (props) => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
