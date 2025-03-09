@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from "../features/user/userSlice";
 import { useEffect } from 'react';
 
+
 const Header = (props) => {
   const dispatch = useDispatch();
   const history = useNavigate();
@@ -256,4 +257,3 @@ const SignOut = styled.div`
 
 
 export default Header
-
